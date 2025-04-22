@@ -7,15 +7,22 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^8",
-    "express": "^4"
+    "express": "^4",
+    "sqlite3": "^5.1.7",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
+    "@cap-js/cds-typer": ">=0.1",
+    "@cap-js/cds-types": "^0.8.0",
     "@cap-js/sqlite": "^1",
-    "@cap-js/cds-types": "^0.8.0"
+    "@types/node": "^20",
+    "typescript": "^5.8.3"
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-weight-management-app": "cds watch --open weight-management-app/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-weight-management-app": "cds watch --open weight-management-app/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch": "cds-ts w",
+    "watch-hybrid": "cds-ts w --profile hybrid"
   },
   "cds": {
     "requires": {
@@ -29,5 +36,8 @@
   },
   "sapux": [
     "app/weight-management-app"
-  ]
+  ],
+  "imports": {
+    "#cds-models/*": "./@cds-models/*/index.js"
+  }
 }
