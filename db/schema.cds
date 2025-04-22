@@ -5,7 +5,9 @@ using {
 
 namespace weight.management;
 
-@assert.unique: {name}
+@assert.unique: {
+  users: [ name ]
+}
 entity Users : cuid, managed {
     name          : String @mandatory;
     age           : Integer;
@@ -13,11 +15,14 @@ entity Users : cuid, managed {
                         on WeightHistory.userID = $self;
 }
 
-@assert.unique: {DateOfInput}
+@assert.unique: {
+  weightHistory: [ DateOfInput ]
+}
 entity WeightHistory : cuid, managed {
-    weight      : Decimal(5, 2)          @mandatory;
-    unit        : String(3) default 'kg' @mandatory;
-    DateOfInput : Date                   @mandatory;
-    userID      : Association to one Users;
-    remarks     : String;
+    weight       : Decimal(5, 2)          @mandatory;
+    unit         : String(3) default 'kg' @mandatory;
+    DateOfInput  : Date                   @mandatory;
+    userID       : Association to one Users;
+    remarks      : String;
+    activityDone : String;
 }

@@ -1,3 +1,26 @@
 sqlite3 your_db_name
-
 sqlite3 -header -csv your_database_name "select * from books;" > books.csv
+
+
+##actual
+.\sqlite3 .\weight-management.sqlite
+
+##
+.headers on
+.mode csv
+.output weight-management-users.csv
+select * from weight_management_Users;
+.quit ## quit or Ctrl + C
+
+#1 line
+.\sqlite3.exe sqliteDB -header -csv "select * from table_name;" > #.csv
+.\sqlite3.exe .\weight-management.sqlite -header -csv "select * from weight_management_users;" > weight-sample.csv
+
+#Current Code to extract
+.\sqlite3.exe .\weight-management.sqlite -header -csv "select * from weight_management_weighthistory;" > Extract-WeightHistory.csv
+.\sqlite3.exe .\weight-management.sqlite -header -csv "select * from weight_management_users;" > Extract-Users.csv
+
+#import Data
+.mode csv
+.import Extract-WeightHistory.csv weight_management_weighthistory
+.import mExtract-Users.csv weight_management_users

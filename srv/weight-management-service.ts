@@ -3,16 +3,25 @@ import { Request, ApplicationService, Query, predicate } from '@sap/cds';
 
 module.exports = class weightManagementService extends ApplicationService {
   init(): Promise<void> {
-    const { WeightHistory } = this.entities;
+    const { WeightHistory, User } = this.entities;
 
-    this.before('READ', WeightHistory, async (req: Request) => {
+    this.before('CREATE', WeightHistory, async (req: Request) => {
       if (req) {
         console.log(req.data);
 
-        console.log(req);
-        // const data : weightManagementService = {  };
+    //     console.log(req);
+    //     // const data : weightManagementService = {  };
       }
     });
+
+    // this.before('SAVE', User, async (req: Request) => {
+    //   if (req) {
+    //     console.log(req.data);
+
+    // //     console.log(req);
+    // //     // const data : weightManagementService = {  };
+    //   }
+    // });
 
     return super.init();
   }

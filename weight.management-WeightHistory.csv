@@ -1,0 +1,4 @@
+ID,createdAt,createdBy,modifiedAt,modifiedBy,weight,unit,DateOfInput,userID_ID,remarks,activityDone,
+80f88ea6-2c6f-4db2-b554-780f2f5df1a5,2025-04-21T17:11:00.467Z,anonymous,2025-04-21T17:11:00.467Z,anonymous,88,kg,2025-04-21,ffd8a96d-cfc2-4439-9b38-c3a01d5700e3,,
+e97ea63b-30e5-4da8-8319-a5e335a5db4e,2025-04-21T17:11:09.615Z,anonymous,2025-04-21T17:11:34.411Z,anonymous,88,kg,2025-04-22,ffd8a96d-cfc2-4439-9b38-c3a01d5700e3,,
+af922efa-f161-4c94-9833-f518c7ea34c0,2025-04-22T11:56:38.440Z,anonymous,2025-04-22T11:56:38.440Z,anonymous,86.75,kg,2025-04-20,ffd8a96d-cfc2-4439-9b38-c3a01d5700e3,,
